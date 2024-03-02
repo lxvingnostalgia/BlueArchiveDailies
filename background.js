@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.action == "getResetTime") {
       const resetTime = new Date(); // Get the current time and date
-      resetTime.setUTCHours(19, 1, 0, 0); // Set the reset time to 19:00 UTC (added 1 minute for better accuracy)
+      resetTime.setUTCHours(19, 0, 0, 0); // Set the reset time to 19:00 UTC
   
       const currentTime = new Date();
       // Calculate remaining time until reset
