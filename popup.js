@@ -4,7 +4,7 @@ chrome.runtime.sendMessage({ action: "getResetTime" }, function(response) {
     if (response.message) {
       document.getElementById('timer').innerText = response.message;
     } else {
-      document.getElementById('timer').innerText = `Time remaining for reset: ${response.hours} hours and ${response.minutes} minutes`;
+      document.getElementById('timer').innerText = `Time remaining for reset: ${response.hours} hours, ${response.minutes} minutes and ${response.seconds} seconds`;
       // Update the popup content to show the remaining time until the missions reset
     }
   });
